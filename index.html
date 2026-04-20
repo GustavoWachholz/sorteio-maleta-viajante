@@ -14,18 +14,28 @@
         <h1>Maleta Viajante</h1>
         <p>Cole a lista de crianças abaixo (um nome por linha):</p>
         
-        <textarea id="listaNomes" placeholder="Exemplo:&#10;Davi&#10;Manuela&#10;Miguel&#10;Alice..."></textarea>
+        <textarea id="listaNomes" placeholder="Exemplo:&#10;Davi&#10;Manuela..."></textarea>
         
         <button onclick="realizarSorteio()">Sortear Agora</button>
-        
-        <div id="resultado"></div>
-
-        <button id="btnAceitar" onclick="aceitarVencedor()">Confirmar Vencedor</button>
 
         <div class="historico-container">
             <h2>Histórico de Sorteados</h2>
             <ul id="listaHistorico"></ul>
             <button class="btn-secundario" onclick="limparHistorico()">Limpar Histórico</button>
+        </div>
+    </div>
+
+    <div id="modalVencedor" class="modal-overlay">
+        <div class="modal-content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuabcxvJJvQU8EvzkLDXTzlg__yU1Mtghx3A&s" alt="Logo Kids" class="logo-pequena">
+            <h3>🎉 TEMOS UM VENCEDOR! 🎉</h3>
+            <p id="mensagemVencedor"></p>
+            <div id="nomeSorteadoDestaque" class="nome-sorteado"></div>
+            
+            <div class="modal-actions">
+                <button class="btn-confirmar" onclick="aceitarVencedor()">Confirmar e Salvar</button>
+                <button class="btn-cancelar" onclick="fecharModal()">Tentar Novamente</button>
+            </div>
         </div>
     </div>
 
